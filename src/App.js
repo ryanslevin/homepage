@@ -1,38 +1,34 @@
 import React, { Component } from 'react';
-import './App.css';
-import NavBar from './Components/NavBar/NavBar'
+import Header from './Components/Header/Header'
+import Education from './Components/Education/Education'
+
 
 class App extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-
   state = {
     currentPage: null,
-    word: "Test"
   }
 
-  changeWord = (newWord) => {
-    console.log("changeWord called")
-    this.setState({
-      word: newWord
-    })
-
+  handlePageChange = (requestedPage) => {
+    if (requestedPage === 'Education') {
+      this.setState({
+        currentPage: <Education />
+      })
+    }
   }
-
 
   render() {
+    const style = {
+      margin: '20px',
+    }
+
     return (
-      <div>
-        <h1>ryan slevin</h1>
-        <NavBar changeWord={this.changeWord}/>
-        <p>{this.state.word}</p>
+      <div style={style}>
+        <Header handlePageChange={this.handlePageChange} />
+        {this.state.currentPage}
       </div>
     );
-
   }
-
 }
 
 export default App;
