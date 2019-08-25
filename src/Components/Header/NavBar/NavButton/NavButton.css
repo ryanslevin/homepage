@@ -1,0 +1,25 @@
+@font-face{
+    font-family: 'Streamster';
+    src: url('../../../../Fonts/Streamster.ttf');
+}
+
+@font-face{
+    font-family: 'MONO';
+    src: url('../../../../Fonts/VCR_OSD_MONO_1.001.ttf');
+}
+
+.nav-button{
+    text-align: center;
+    margin: 0 auto;
+    border: none;
+    background-color: rgba(0,0,0,0);
+    font-size: 25px;
+    margin-bottom: 50%;
+    margin-top: 50%;
+    color: rgba(0,0,0);
+    font-family: 'MONO';
+}
+
+.nav-button:hover{
+    cursor: pointer;
+}

@@ -1,8 +1,9 @@
 import React from 'react'
+import './Title.css'
 
 function Title() {
     return(
-        <h1>r y a n s l e v i n</h1>
+        <h1 className='title'>R y a n S l e v i n</h1>
     )
 
 }

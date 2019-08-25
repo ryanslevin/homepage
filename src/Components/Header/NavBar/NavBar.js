@@ -1,14 +1,11 @@
 import React from 'react'
 import NavButton from './NavButton/NavButton'
+import './NavBar.css'
 
 function NavBar(props) {
 
-        const style = {
-            columnCount: 3,
-        }
-
     return (
-        <div style={style}>
+        <div className='nav-bar'>
             <NavButton name="Education" handlePageChange={props.handlePageChange}/>
             <NavButton name="Projects" handlePageChange={props.handlePageChange}/>
             <NavButton name="Contact" handlePageChange={props.handlePageChange}/>

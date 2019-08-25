@@ -1,24 +1,18 @@
-import React, { Component } from 'react'
+import React from 'react';
 
-import NavBar from './NavBar/NavBar'
-import Title from './Title/Title'
+import NavBar from './NavBar/NavBar';
+import Title from './Title/Title';
+import './Header.css';
 
-class Header extends Component {
+function Header(props){
 
-    render() {
-
-        const style = {
-            columnCount: 2
-        }
-        return(
-        <div style={style}>
+    return(
+        <div className='header'>
             <Title />
-            <NavBar handlePageChange={this.props.handlePageChange}/>
+            <NavBar handlePageChange={props.handlePageChange}/>
         </div>
         )
 
     }
-
-}
 
 export default Header;

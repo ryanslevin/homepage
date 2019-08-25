@@ -1,0 +1,21 @@
+@font-face{
+    font-family: 'MorningStar';
+    src: url('../../../Fonts/MorningStar.ttf');
+}
+
+@font-face{
+    font-family: 'OutrunFuture';
+    src: url('../../../Fonts/Outrun future.otf');
+}
+
+@font-face{
+    font-family: 'Streamster';
+    src: url('../../../Fonts/Streamster.ttf');
+}
+
+.title{
+    color: rgba(152,3,77,.8);
+    font-family: 'Streamster';
+    font-size: 3.875em;
+
+}

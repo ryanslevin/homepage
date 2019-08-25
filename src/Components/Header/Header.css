@@ -1,0 +1,6 @@
+.header{
+    column-count: 2;
+    text-align: center;
+    height: 100%;
+    column-fill: auto;
+}

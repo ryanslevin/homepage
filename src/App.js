@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Header from './Components/Header/Header'
-import Education from './Components/Education/Education'
-
+import Header from './Components/Header/Header';
+import Education from './Components/Education/Education';
+import './App.css';
 
 class App extends Component {
 
@@ -18,14 +18,13 @@ class App extends Component {
   }
 
   render() {
-    const style = {
-      margin: '20px',
-    }
 
     return (
-      <div style={style}>
+      <div className='background'>
+      <div className='app'>
         <Header handlePageChange={this.handlePageChange} />
         {this.state.currentPage}
+      </div>
       </div>
     );
   }

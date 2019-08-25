@@ -1,17 +1,14 @@
-import React from 'react'
+import React from 'react';
+
+import './NavButton.css';
 
 function NavButton(props) {
-    const style = {
-            textAlign: 'center',
-            margin: 'auto'
-        }
 
         return (
             <div>
-                <button style={style} onClick={() => props.handlePageChange(props.name)}>{props.name}</button>
+                <button className='nav-button' onClick={() => props.handlePageChange(props.name)}>{props.name}</button>
             </div>
         )
     }
-
 
 export default NavButton;

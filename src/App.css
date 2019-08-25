@@ -1,0 +1,10 @@
+.background{
+    background-image: linear-gradient(rgba(45,226,230,.5), rgba(255,56,100,.5));
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+.app{
+    margin: 20px
+}
