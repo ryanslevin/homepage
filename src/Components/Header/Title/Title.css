@@ -14,8 +14,7 @@
 }
 
 .title{
-    color: rgba(185,0,75,.7);
-    font-family: 'Streamster';
-    font-size: 3.875em;
+    font-size: 25px;
+    width: 25%;
 
 }
