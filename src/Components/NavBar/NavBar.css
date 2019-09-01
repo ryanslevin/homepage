@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'Streamster';
+    src: url('../../Fonts/Streamster.ttf');
+  }
+
+.nav-bar{
+    column-count: 4;
+    width: 100%;
+    height: 5vh;
+    position: fixed;
+    background-color: rgb(0, 0, 0, .8);
+    text-align: center;
+
+}
+
+.nav-btn{
+    color: white;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: 'Streamster';
+    font-size: 2.75vh;
+    display: inline-block;
+}
+
+.nav-btn-active{
+    color: red;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: 'Streamster';
+    font-size: 2.75vh;
+    display: inline-block;
+}
