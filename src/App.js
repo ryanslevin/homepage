@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
-import Header from './Components/Header/Header';
+import NavBar from './Components/NavBar/NavBar'
 import Education from './Components/Education/Education';
 import Projects from './Components/Projects/Projects';
 import Contact from './Components/Contact/Contact'
+import Home from './Components/Home/Home'
 import './App.css';
 
-import * as Scroll from 'react-scroll';
-import { Link, Events, scroller } from "react-scroll";
+import { Events } from "react-scroll";
+
 
 class App extends Component {
 
+  state = {
+    currentContainer: 'Home'
+  }
 
     componentDidMount() {
       Events.scrollEvent.register("begin", function(to, element) {
@@ -25,8 +29,9 @@ class App extends Component {
 
     return (
         <div className='app'>
-            <Header handlePageChange={this.handlePageChange} />
+            <NavBar />
             <div className='container'>
+              <Home id='homeContainer' />
               <Education id="educationContainer" />
               <Projects id='projectsContainer' />
               <Contact id='contactContainer' />
