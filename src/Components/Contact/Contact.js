@@ -5,7 +5,7 @@ function Contact(props) {
 
     return(
         <div className='contact' id={props.id}>
-            <h3>Contact!</h3>
+            <h3>Contact</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque venenatis pellentesque mollis. Nam quis erat lorem. Quisque et magna vitae enim fringilla convallis. Maecenas iaculis ligula sit amet nibh pellentesque, sit amet scelerisque lacus ornare. Aenean ut lectus convallis, facilisis dui non, mollis purus. In suscipit nibh eget condimentum commodo. Sed rutrum lectus et mi condimentum, nec malesuada lectus placerat. Vivamus enim nunc, condimentum quis dapibus a, rhoncus id mi. Morbi vitae pellentesque lectus. Cras vel nulla vitae velit pellentesque aliquam in efficitur ligula. Aliquam semper aliquet enim ac semper. Vestibulum pulvinar ex leo, at posuere odio aliquam quis. Vivamus volutpat quis ex quis gravida.
 
 Nunc pellentesque bibendum nulla malesuada aliquet. Nulla a porta erat. Donec id vestibulum odio, at mattis quam. Quisque tempus et odio ac ullamcorper. Nulla quis ex nisl. Donec pharetra nulla nec nunc molestie, ut mattis nisi facilisis. Phasellus arcu quam, faucibus eget venenatis gravida, vulputate ac tellus. Curabitur hendrerit auctor dolor non imperdiet.

@@ -3,32 +3,69 @@
     src: url('../../Fonts/Streamster.ttf');
   }
 
-.nav-bar{
-    column-count: 4;
+  @font-face {
+    font-family: 'Raleway';
+    src: url('../../Fonts/RalewayThin.ttf');
+  }
+  
+  .nav-bar{
+    column-count: 2;
     width: 100%;
     height: 5vh;
     position: fixed;
-    background-color: rgb(0, 0, 0, .8);
     text-align: center;
+    display: table;
+  }
 
+.nav-bar-minimalist{
+    background-color: white;
+}  
+
+.nav-bar-vaporwave{
+    background-color: aquamarine;
+}
+
+.nav-bar-synthwave{
+    background-color: black;
 }
 
 .nav-btn{
-    color: white;
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
-    font-family: 'Streamster';
-    font-size: 2.75vh;
-    display: inline-block;
+    font-size: 2.5vh;
+    display: table-cell;
+    vertical-align: middle;
+    cursor: pointer;    
 }
 
-.nav-btn-active{
-    color: red;
-    text-align: center;
-    margin-left: 10%;
-    margin-right: 10%;
+.nav-btn-minimalist{
+    color: rgba(0,0,0,.7);
+    font-family: 'Raleway';
+}
+
+.nav-btn-vaporwave{
+    color:purple;
     font-family: 'Streamster';
-    font-size: 2.75vh;
-    display: inline-block;
+}
+
+.nav-btn-synthwave{
+    color: cyan;
+    font-family: 'Streamster';
+}
+
+.nav-btn-active-minimalist{
+    color: black;
+    font-family: 'Raleway';
+}
+
+.nav-btn-active-vaporwave{
+    color: pink;
+    font-family: 'Streamster';
+}
+
+
+.nav-btn-active-synthwave{
+    color: red;
+    font-family: 'Streamster';
 }
