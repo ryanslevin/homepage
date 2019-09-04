@@ -1,0 +1,23 @@
+#progress {
+    width: 500px;   
+    border: 1px solid black;
+    position: relative;
+    padding: 3px;
+   }
+   
+   #percent {
+    position: absolute;   
+    left: 50%;
+   }
+   
+   #bar-5 {
+    height: 20px;
+    background-color: green;
+    width: 5%;
+   }
+
+   #bar-95 {
+    height: 20px;
+    background-color: green;
+    width: 5%;
+   }

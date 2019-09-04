@@ -17,40 +17,39 @@ class NavBar extends Component {
 
     render() {
 
+        let navBarClass = 'nav-bar nav-bar-'+this.props.theme
 
-        let homeLinkClass = 'nav-btn'
-        let educationLinkClass = 'nav-btn'        
-        let projectsLinkClass = 'nav-btn'
-        let contactLinkClass = 'nav-btn'
+
+        let homeLinkClass = 'nav-btn nav-btn-'+this.props.theme
+        let resumeLinkClass = 'nav-btn nav-btn-'+this.props.theme    
+        let projectsLinkClass = 'nav-btn nav-btn-'+this.props.theme
+        let contactLinkClass = 'nav-btn nav-btn-'+this.props.theme
 
         if (this.state.activeContainer === 'homeContainer') {
-            homeLinkClass = 'nav-btn-active'
-        } else if (this.state.activeContainer === 'educationContainer') {
-            educationLinkClass = 'nav-btn-active'
+            homeLinkClass = 'nav-btn nav-btn-active-'+this.props.theme
+        } else if (this.state.activeContainer === 'resumeContainer') {
+            resumeLinkClass = 'nav-btn nav-btn-active-'+this.props.theme
         } else if (this.state.activeContainer === 'projectsContainer') {
-            projectsLinkClass = 'nav-btn-active'
+            projectsLinkClass = 'nav-btn nav-btn-active-'+this.props.theme
         } else if (this.state.activeContainer === 'contactContainer') {
-            contactLinkClass = 'nav-btn-active'
+            contactLinkClass = 'nav-btn nav-btn-active-'+this.props.theme
         }
 
     return (
-        <div className='nav-bar'>
-            <div>
+        <div className={navBarClass}>
             <Link className={homeLinkClass} to='homeContainer'
                 spy={true} smooth={true} duration={500} onClick={() => this.handleContainerChange('homeContainer')}>Home</Link>
-                </div>
-            <div>
-            <Link className={educationLinkClass} to='educationContainer'
-                spy={true} smooth={true} duration={500} onClick={() => this.handleContainerChange('educationContainer')}>Education</Link>
-                </div>
-            <div>
+            <Link className={resumeLinkClass} to='resumeContainer'
+                spy={true} smooth={true} duration={500} onClick={() => this.handleContainerChange('resumeContainer')}>Resume</Link>
             <Link className={projectsLinkClass} to='projectsContainer'
                 spy={true} smooth={true} duration={500} onClick={() => this.handleContainerChange('projectsContainer')}>Projects</Link>
-                </div>
-            <div>
             <Link className={contactLinkClass} to='contactContainer'
                 spy={true} smooth={true} duration={500} onClick={() => this.handleContainerChange('contactContainer')}>Contact</Link>
-                </div>
+                    <select name='themes' onChange={this.props.handleThemeChange(this.event)}>
+                        <option value='minimalist'>Minimalist</option>
+                        <option value='synthwave'>Synthwave</option>
+                        <option value='vaporwave'>Vaporwave</option>
+                    </select>
         </div>
     )
     }

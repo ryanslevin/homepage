@@ -3,17 +3,29 @@ import React from 'react';
 import './Home.css'
 
 export default function Home(props) {
-    return (
-        <div className='home' id={props.id}>
-            <div className='moon-container'>
-            <div id='moon' />
-            </div>
-            <div className='name-container'>
-            <h2 className='name' >R y a n S l e v i n</h2>
-            <p className='title'>Software Engineer - Vancouver, BC</p>
-            </div>
-            <div id='right-line' />
 
+
+    let homeContainerClass = 'home-'+props.theme;
+    let imageContainerClass = 'image-container-'+props.theme;
+    let nameContainerClass = 'name-container-'+props.theme;
+    let nameClass = 'name-'+props.theme;
+    let titleClass = 'title-'+props.theme;
+    let linkedinClass = 'fa fa-linkedin fa-'+props.theme;
+    let githubClass = 'fa fa-github fa-'+props.theme;
+    let twitterClass = 'fa fa-twitter fa-'+props.theme;    
+
+    return (
+        <div className={homeContainerClass} id={props.id}>
+            <div className={imageContainerClass}>
+            </div>
+            <div className={nameContainerClass}>
+            <h2 className={nameClass} >Ryan Slevin</h2>
+            <div className={titleClass}>Software Engineer - Vancouver, BC</div>
+            <br></br>
+            <a href="https://www.linkedin.com/in/ryan-slevin-02b99140/" className={linkedinClass}></a>
+            <a href="https://github.com/ryanslevin" className={githubClass}></a>
+            <a href="https://twitter.com/ryansslevin" className={twitterClass}></a>            
+            </div>
         </div>
     )
 }

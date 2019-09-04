@@ -1,10 +1,15 @@
+
 .app{
     width: 100%;
-    overflow: hidden;
     background: rgba(52,50,48,1) 80%;
 }
+
 
 p{
     color: white;
      font-size: 1.25vh;
+}
+
+.container{
+    text-align: center;
 }
