@@ -13,7 +13,7 @@ class App extends Component {
 
   state = {
     currentContainer: 'Home',
-    theme: 'minimalist'
+    theme: 'dark'
   }
 
   componentDidMount() {
@@ -38,15 +38,16 @@ class App extends Component {
 
   render() {
 
+
+    let appStyleClass = 'app app-'+this.state.theme;
+
     return (
-        <div className='app'>
+        <div className={appStyleClass}>
           <NavBar theme={this.state.theme} handleThemeChange={() => this.handleThemeChange.bind(this)}/>
-          <div className='container'>
             <Home id='homeContainer' theme={this.state.theme}/>
             <Resume id="resumeContainer" theme={this.state.theme}/>
             <Projects id='projectsContainer' theme={this.state.theme}/>
             <Contact id='contactContainer' theme={this.state.theme}/>
-          </div>
         </div>
     );
   }

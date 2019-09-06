@@ -46,9 +46,8 @@ class NavBar extends Component {
             <Link className={contactLinkClass} to='contactContainer'
                 spy={true} smooth={true} duration={500} onClick={() => this.handleContainerChange('contactContainer')}>Contact</Link>
                     <select name='themes' onChange={this.props.handleThemeChange(this.event)}>
-                        <option value='minimalist'>Minimalist</option>
-                        <option value='synthwave'>Synthwave</option>
-                        <option value='vaporwave'>Vaporwave</option>
+                        <option value='dark'>Dark</option>
+                        <option value='light'>Light</option>
                     </select>
         </div>
     )
