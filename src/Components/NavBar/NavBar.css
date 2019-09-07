@@ -20,19 +20,15 @@
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
-    font-size: 2.5vh;
+    font-size: 1.25vmax;
     display: table-cell;
     vertical-align: middle;
-    cursor: pointer;   
-    font-style: bold; 
+    cursor: pointer;  
+    position: relative; 
 }
 
 .nav-btn-light{
     color: rgba(0,0,0,.5);
-}
-
-.nav-btn-light:hover{
-    color: purple;
 }
 
 .nav-btn-dark{
@@ -40,13 +36,99 @@
 }
 
 .nav-btn-active-light{
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 1.25vmax;
+    display: table-cell;
+    vertical-align: middle;
+    cursor: default;
     color: black;
-    text-decoration: underline;
 }
 
 .nav-btn-active-dark{
-    color: gray;
-    text-decoration: underline;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 1.25vmax;
+    display: table-cell;
+    position: relative;
+    vertical-align: middle; 
+    color: rgb(99, 93, 93);
+    cursor: default;
+}
 
+.nav-btn-active-light:before, .nav-btn-active-dark:before, .nav-btn-active-light:after, .nav-btn-active-dark:after {
+    opacity: 1;
+    font-size: 1.25vmax;
+}
+
+.nav-btn-active-light:before, .nav-btn-active-dark:before{
+    content: '{ ';
+    left: 100px;
+    transform: translateX(100px);    
+}
+
+.nav-btn-active-light:after, .nav-btn-active-dark:after{
+    content: ' }';
+    right: 100px;
+    transform: translateX(-10px);    
+}
+
+.nav-btn:before, .nav-btn:after {
+    opacity: 0;
+    font-size: 1.25vmax;
+    transition: all .5s;
+}
+
+.nav-btn:before {
+    content: '{ ';
+    left: 0px;
+    transform: translateX(10px);
+}
+
+.nav-btn:after {
+    content: ' }';
+    right: 0px;
+    transform: translateX(-10px);
+}
+
+.nav-btn:hover:before{
+    opacity: 1;
+}
+
+.nav-btn:hover:after{
+    opacity: 1;
+}
+
+.fa {
+}
+
+.fa-sun{
+    color: white;
+    padding: 1vmax;
+    font-size: 1.25vmax;
+    width: 1vmax;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.fa-sun:hover{
+    opacity: 0.7;
+}
+
+.fa-moon{
+    color:black;
+    padding: 1vmax;
+    font-size: 1.25vmax;
+    width: 1vmax;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.fa-moon:hover{
+    opacity: 0.7;
 }
 
