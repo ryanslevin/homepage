@@ -27,9 +27,16 @@ class App extends Component {
   }
 
   handleThemeChange(event) {
-    this.setState({
-      theme: event.target.value
-    })
+
+    if (this.state.theme === 'dark') {
+      this.setState({
+        theme: 'light'
+      })
+    }else{
+      this.setState({
+        theme: 'dark'
+      })
+    }
   }
 
   componentDidUpdate() {
