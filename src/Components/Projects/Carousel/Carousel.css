@@ -1,0 +1,22 @@
+
+.slider-container{
+    text-align: center;
+    width: 100%;
+}
+
+.slider-container-inner{
+    column-count: 2;
+}
+
+.slick-slide img{
+    width: 80%;
+    display: inline-block;
+}
+
+button.slick-prev{
+    left: -35px;
+}
+
+button.slick.next{
+    right: -35px;
+}

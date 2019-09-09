@@ -1,3 +1,5 @@
+html { font-size: calc(1em + 1vw) }
+
 .app{
     width: 100%;
     text-align: center;
@@ -46,27 +48,10 @@
     text-align: center;
 }
 
-h1{
-
+p{
+    font-size: .6em;
 }
 
 h2{
-    font-size: 2vmax;
     font-weight: 200;
-}
-
-h3{
-    font-size: 1vmax;
-}
-
-h4{
-    font-size: .75vmax;
-}
-
-h5{
-    font-size: .75vmax;
-}
-
-p{
-    font-size: .75vmax;
 }
