@@ -21,15 +21,15 @@ class NavBar extends Component {
 
         let navBarClass = 'nav-bar nav-bar-' + this.props.theme
         let homeLinkClass = 'nav-btn nav-btn-' + this.props.theme
-        let resumeLinkClass = 'nav-btn nav-btn-' + this.props.theme
+        let aboutLinkClass = 'nav-btn nav-btn-' + this.props.theme
         let projectsLinkClass = 'nav-btn nav-btn-' + this.props.theme
         let contactLinkClass = 'nav-btn nav-btn-' + this.props.theme
 
 
         if (this.state.activeContainer === 'homeContainer') {
             homeLinkClass = 'nav-btn-active-' + this.props.theme
-        } else if (this.state.activeContainer === 'resumeContainer') {
-            resumeLinkClass = 'nav-btn-active-' + this.props.theme
+        } else if (this.state.activeContainer === 'aboutContainer') {
+            aboutLinkClass = 'nav-btn-active-' + this.props.theme
         } else if (this.state.activeContainer === 'projectsContainer') {
             projectsLinkClass = 'nav-btn-active-' + this.props.theme
         } else if (this.state.activeContainer === 'contactContainer') {
@@ -49,8 +49,8 @@ class NavBar extends Component {
             <div className={navBarClass}>
                 <Link className={homeLinkClass} to='homeContainer'
                     spy={true} smooth={true} duration={500} onClick={() => this.handleContainerChange('homeContainer')}>Home</Link>
-                <Link className={resumeLinkClass} to='resumeContainer'
-                    spy={true} smooth={true} duration={500} onClick={() => this.handleContainerChange('resumeContainer')}>Resume</Link>
+                <Link className={aboutLinkClass} to='aboutContainer'
+                    spy={true} smooth={true} duration={500} onClick={() => this.handleContainerChange('aboutContainer')}>About</Link>
                 <Link className={projectsLinkClass} to='projectsContainer'
                     spy={true} smooth={true} duration={500} onClick={() => this.handleContainerChange('projectsContainer')}>Projects</Link>
                 <Link className={contactLinkClass} to='contactContainer'

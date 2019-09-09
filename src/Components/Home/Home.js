@@ -23,7 +23,6 @@ export default function Home(props) {
             <a href="https://www.linkedin.com/in/ryan-slevin-02b99140/" className={linkedinClass}></a>
             <a href="https://github.com/ryanslevin" className={githubClass}></a>
             <a href="https://twitter.com/ryansslevin" className={twitterClass}></a>
-            <div className='tree'></div>        
             </div>
         </div>
     )

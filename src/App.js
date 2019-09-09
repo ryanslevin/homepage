@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import NavBar from './Components/NavBar/NavBar'
-import Resume from './Components/Resume/Resume';
+import About from './Components/About/About';
 import Projects from './Components/Projects/Projects';
 import Contact from './Components/Contact/Contact'
 import Home from './Components/Home/Home'
@@ -45,14 +45,13 @@ class App extends Component {
 
   render() {
 
-
     let appStyleClass = 'app app-'+this.state.theme;
 
     return (
         <div className={appStyleClass}>
-          <NavBar theme={this.state.theme} handleThemeChange={() => this.handleThemeChange.bind(this)}/>
+            <NavBar theme={this.state.theme} handleThemeChange={() => this.handleThemeChange.bind(this)}/>
             <Home id='homeContainer' theme={this.state.theme}/>
-            <Resume id="resumeContainer" theme={this.state.theme}/>
+            <About id="aboutContainer" theme={this.state.theme}/>
             <Projects id='projectsContainer' theme={this.state.theme}/>
             <Contact id='contactContainer' theme={this.state.theme}/>
         </div>
