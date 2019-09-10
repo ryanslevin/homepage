@@ -21,16 +21,20 @@ function Carousel() {
 
 
     <Slider {...settings}>
+      <div className='out'>
       <div className='slider-container'>
+      <img className='portfolio-image' src={HomepageImage} />
         <h4 href='https://github.com/ryanslevin/homepage'>Homepage</h4>
         <p>Languages: Javascript, JSX, HTML, CSS      Frameworks: React      Deployment: AWS Amplify</p>
         <p>Status: Deployed</p>
         <div className='slider-container-inner'>
           <p>Homepage is my personal portfolio site. Built with React and deployed with AWS Amplify.</p>
           <p>This project demonstrates my ability to deliver a finished and polished product using the latest frameworks and techniques.</p>
-          <img className='portfolio-image' src={HomepageImage} />
+
         </div>
       </div>
+      </div>
+      <div className='out'>
       <div className='slider-container'>
         <h4>page-availability</h4>
         <p>Languages: Powershell      Frameworks: .NET      Deployment: Locally Scheduled Task</p>
@@ -41,6 +45,8 @@ function Carousel() {
           <p>This project demonstrates my passion for developing solutions to real business problems and my ability to create long-term automated solutions using a variety of technologies.</p>
         </div>
       </div>
+      </div>
+      <div className='out'>
       <div className='slider-container'>
         <h4>eReg</h4>
         <p>Languages: Java, MySQL, Javascript, JSC, HTML, CSS      Frameworks: Spring Boot, React     Deployment: Locally Scheduled Task</p>
@@ -51,9 +57,9 @@ function Carousel() {
           <p>The program currently allows for user and course creation, updating and the creation of user registrations.</p>
         </div>
       </div>
+            </div>
+
     </Slider>
-
-
 
   )
 }

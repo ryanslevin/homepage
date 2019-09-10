@@ -12,14 +12,14 @@ html { font-size: calc(1em + 1vw) }
 }
 
 .app-dark{
-    background-color: rgb(12, 12, 12);
+    background-color: rgb(0, 0, 0);
     color: white;
 }
 
 .outer-container{
     display: flex;
     flex-direction: column;
-    height: 95vh;
+    height: 97vh;
     width: 100%;
     padding-top: 5vh;
     display: inline-block;
@@ -41,7 +41,7 @@ html { font-size: calc(1em + 1vw) }
 }
 
 .inner-dark{
-    background-color: rgb(12, 12, 12);
+    background-color: rgb(0, 0, 0)
 }
 
 .header-container{

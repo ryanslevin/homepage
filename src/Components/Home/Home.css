@@ -8,11 +8,11 @@
 }
 
 .home-light{
-    background-color: #F5F5F5;
+    background-image: linear-gradient(rgb(201, 201, 201) 5%,rgb(230, 230, 230),  #F5F5F5)
 }
 
 .home-dark{
-    background-color: rgb(12, 12, 12);
+    background-image: linear-gradient(rgb(26, 26, 26) 5%,rgb(15, 15, 15),  black)
 }
 
 .name-container{

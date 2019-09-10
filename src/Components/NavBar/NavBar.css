@@ -2,25 +2,26 @@
 .nav-bar{
     column-count: 2;
     width: 100%;
-    height: 5vh;
+    height: 3vh;
     position: fixed;
     text-align: center;
     display: table;
+    z-index:1;
 }
 
 .nav-bar-light{
-    background-color: #F5F5F5;
+    background-color: rgb(201, 201, 201);
 }
 
 .nav-bar-dark{
-    background-color: rgb(12, 12, 12);
+    background-color: rgb(26, 26, 26);
 }  
 
 .nav-btn{
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
-    font-size: 1.25vmax;
+    font-size: .6em;
     display: table-cell;
     vertical-align: middle;
     cursor: pointer;  
@@ -39,7 +40,7 @@
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
-    font-size: 1.25vmax;
+    font-size: .6em;
     display: table-cell;
     vertical-align: middle;
     cursor: default;
@@ -50,7 +51,7 @@
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
-    font-size: 1.25vmax;
+    font-size: .6em;
     display: table-cell;
     position: relative;
     vertical-align: middle; 

@@ -4,6 +4,7 @@ function Project(props) {
     return(
         <div>
             <h3>{this.project.name}</h3>
+            <p></p>
         </div>
     )
 }
