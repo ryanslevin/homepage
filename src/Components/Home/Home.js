@@ -13,8 +13,12 @@ export default function Home(props) {
     let linkedinClass = 'fa fa-linkedin fa-' + props.theme;
     let githubClass = 'fa fa-github fa-' + props.theme;
     let twitterClass = 'fa fa-twitter fa-' + props.theme;
+    let backgroundContainer = 'background-container background-'+props.theme;
+
+   
 
     return (
+
         <div className={homeContainerClass} id={props.id}>
             <div className={nameContainerClass}>
                 <h2 className={nameClass} >Ryan Slevin</h2>

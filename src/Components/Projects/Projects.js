@@ -15,8 +15,7 @@ class Projects extends Component {
             <div className={projectsClass} id={this.props.id}>
                 <div className={innerClass}>
                 <h2>Projects</h2>
-                <Carousel />
-
+                <Carousel theme={this.props.theme}/>
                </div>
             </div>
         )

@@ -1,3 +1,4 @@
+html { font-size: calc(1em + 1vw) }
 
 .nav-bar{
     column-count: 2;
@@ -10,7 +11,7 @@
 }
 
 .nav-bar-light{
-    background-color: rgb(201, 201, 201);
+    background-color: rgb(219, 219, 219);
 }
 
 .nav-bar-dark{
@@ -61,7 +62,7 @@
 
 .nav-btn-active-light:before, .nav-btn-active-dark:before, .nav-btn-active-light:after, .nav-btn-active-dark:after {
     opacity: 1;
-    font-size: 1.25vmax;
+    font-size: 1em;
 }
 
 .nav-btn-active-light:before, .nav-btn-active-dark:before{
@@ -78,7 +79,7 @@
 
 .nav-btn:before, .nav-btn:after {
     opacity: 0;
-    font-size: 1.25vmax;
+    font-size: 1em;
     transition: all .5s;
 }
 
