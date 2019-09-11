@@ -1,15 +1,43 @@
 
-.slider-container{
-    text-align: center;
+.out{
     width: 100%;
+    text-align: center;
+}
+.slider-container{
+    width: 80%;
+    text-align: center;
+    height: 70vh;
+    display: inline-block;
+    border: 2px rgb(8, 8, 8) solid;
+    border-radius: .5%;
+}
+
+.slider-dark{
+    background-color: rgb(20, 20, 20)
+}
+
+.slider-light{
+    background-color: rgb(190, 190, 190)
 }
 
 .slider-container-inner{
     column-count: 2;
+    padding: 5px;
+}
+
+.two-columns{
+    column-count: 2;
+    width: 50%;
+    text-align: center;
+    display: inline-block;
+}
+
+.column{
+    height: 100%;
 }
 
 .slick-slide img{
-    width: 80%;
+    width: 70%;
     display: inline-block;
 }
 
@@ -19,4 +47,51 @@ button.slick-prev{
 
 button.slick.next{
     right: -35px;
+}
+
+.fa-react {
+    color: rgb(0, 169, 221);
+    display: inline-block;
+  }
+
+.fa-aws {
+    color: rgb(255, 145, 0);
+    display: inline-block;
+}
+
+.fa-windows {
+    color: rgb(0, 145, 202);
+    display: inline-block;
+}
+
+.fa-java {
+    color: rgb(31, 133, 192);
+    display: inline-block;
+}
+
+.company-title{
+    display: inline;
+    margin: 5px;
+    font-weight: 400;
+    font-size: .75em;
+}
+
+.company-title-react{
+    color: rgb(0, 169, 221);
+}
+
+.company-title-aws{
+    color: rgb(255, 145, 0);
+}
+
+.company-title-microsoft{
+    color: rgb(0, 145, 202);
+}
+
+.company-title-java{
+    color: rgb(226, 0, 0);
+}
+
+.company-title-spring{
+    color: rgb(90, 202, 68);
 }

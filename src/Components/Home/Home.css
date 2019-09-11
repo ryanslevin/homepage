@@ -7,14 +7,6 @@
     align-items: center;
 }
 
-.home-light{
-    background-color: #F5F5F5;
-}
-
-.home-dark{
-    background-color: rgb(12, 12, 12);
-}
-
 .name-container{
     position: relative;
     top: 40%;

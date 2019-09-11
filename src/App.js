@@ -4,9 +4,11 @@ import About from './Components/About/About';
 import Projects from './Components/Projects/Projects';
 import Contact from './Components/Contact/Contact'
 import Home from './Components/Home/Home'
+import Background from './Components/Background/Background'
 import './App.css';
 
 import { Events } from "react-scroll";
+import { throwStatement } from '@babel/types';
 
 
 class App extends Component {
@@ -32,7 +34,7 @@ class App extends Component {
       this.setState({
         theme: 'light'
       })
-    }else{
+    } else {
       this.setState({
         theme: 'dark'
       })
@@ -45,16 +47,20 @@ class App extends Component {
 
   render() {
 
-    let appStyleClass = 'app app-'+this.state.theme;
+    let appStyleClass = 'app app-' + this.state.theme;
+    let backgroundContainerStyle = 'background-container background-container-'+this.state.theme;
 
     return (
-        <div className={appStyleClass}>
-            <NavBar theme={this.state.theme} handleThemeChange={() => this.handleThemeChange.bind(this)}/>
-            <Home id='homeContainer' theme={this.state.theme}/>
-            <About id="aboutContainer" theme={this.state.theme}/>
-            <Projects id='projectsContainer' theme={this.state.theme}/>
-            <Contact id='contactContainer' theme={this.state.theme}/>
+      <div className={appStyleClass}>
+        <NavBar theme={this.state.theme} handleThemeChange={() => this.handleThemeChange.bind(this)} />
+        <div className={backgroundContainerStyle}>
+          <Background theme={this.state.theme} />
         </div>
+        <Home id='homeContainer' theme={this.state.theme} />
+        <About id="aboutContainer" theme={this.state.theme} />
+        <Projects id='projectsContainer' theme={this.state.theme} />
+        <Contact id='contactContainer' theme={this.state.theme} />
+      </div>
     );
   }
 }
