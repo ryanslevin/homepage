@@ -4,10 +4,11 @@ import Particles from 'react-particles-js';
 
 function Background(props) {
 
+    //Dark teme settings for particles object
     let particlesDark = {
         "particles": {
             "number": {
-                "value": 60,
+                "value": 50,
                 "density": {
                     "enable": true,
                     "value_area": 3000
@@ -18,11 +19,13 @@ function Background(props) {
             },
             "move": {
                 "direction": "right",
-                "speed": 0.25,
-                "bounce": false
+                "speed": 0.4,
+                "straight": true,
+                "bounce": false,
+                "out_mode": "out"
             },
             "size": {
-                "value": 1
+                "value": 1.5
             },
             "opacity": {
                 "anim": {
@@ -42,13 +45,14 @@ function Background(props) {
         "retina_detect": true
     }
 
+    //Light theme settings for particle object
     let particlesLight = {
         "particles": {
             "number": {
-                "value": 2,
+                "value": 5,
                 "density": {
                     "enable": true,
-                    "value_area": 1500
+                    "value_area": 3000
                 }
             },    
             "color": {
@@ -59,7 +63,7 @@ function Background(props) {
                 "opacity": 1,
                 "color": "#383838",
                 "width": 1,
-                "distance": 1800,
+                "distance": 3000,
             },
             "move": {
                 "direction": "none",
@@ -88,6 +92,7 @@ function Background(props) {
 
     let particles = null;
 
+    //Assign settins to particle variable based on props theme
     if (props.theme === 'dark') {
         particles = particlesDark
     }else {

@@ -11,6 +11,7 @@ class NavBar extends Component {
         activeContainer: 'homeContainer'
     }
 
+    //Set activeContainer after nav button is pressed
     handleContainerChange(newContainer) {
         this.setState({
             activeContainer: newContainer
@@ -26,6 +27,7 @@ class NavBar extends Component {
         let contactLinkClass = 'nav-btn nav-btn-' + this.props.theme
 
 
+        //Determines which nav button to make active based on state of activeContainer
         if (this.state.activeContainer === 'homeContainer') {
             homeLinkClass = 'nav-btn-active-' + this.props.theme
         } else if (this.state.activeContainer === 'aboutContainer') {
@@ -38,8 +40,8 @@ class NavBar extends Component {
 
         let icon = null;
 
+        //Switching which icon (moon/sun) is shown based on theme
         if (this.props.theme === 'light') {
-            console.log('theme is light yo')
             icon = <FontAwesomeIcon icon={faMoon} onClick={this.props.handleThemeChange(this.event)}/>
         }else {
             icon = <FontAwesomeIcon icon={faSun} onClick={this.props.handleThemeChange(this.event)}/>

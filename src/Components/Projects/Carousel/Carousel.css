@@ -1,39 +1,42 @@
 
 .out{
     width: 100%;
-    text-align: center;
+    text-align: left;
 }
 .slider-container{
-    width: 80%;
-    text-align: center;
+    width: 100%;
     height: 70vh;
     display: inline-block;
-    border: 2px rgb(8, 8, 8) solid;
-    border-radius: .5%;
-}
-
-.slider-dark{
-    background-color: rgb(20, 20, 20)
-}
-
-.slider-light{
-    background-color: rgb(190, 190, 190)
+    margin-top: 10vh;
 }
 
 .slider-container-inner{
     column-count: 2;
     padding: 5px;
+    text-align: left;
+    margin: 25px;
+    height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .slider-container-inner{
+        column-count: 1;
+    }
+
+    .slider-container{
+        margin-top: 0vh;
+    }
 }
 
 .two-columns{
     column-count: 2;
-    width: 50%;
-    text-align: center;
+    width: 100%;
     display: inline-block;
 }
 
 .column{
-    height: 100%;
+    height: 50%;
+    text-align: left;
 }
 
 .slick-slide img{
@@ -76,6 +79,10 @@ button.slick.next{
     font-size: .75em;
 }
 
+.project-title{
+    display: inline;
+}
+
 .company-title-react{
     color: rgb(0, 169, 221);
 }
@@ -94,4 +101,52 @@ button.slick.next{
 
 .company-title-spring{
     color: rgb(90, 202, 68);
+}
+
+.spring-boot-logo{
+    height: 30px;
+    width: 30px !important;
+}
+
+.fa-light{
+    color: black;
+    margin-right: 10px;
+}
+
+.fa-dark{
+    color: white;
+    margin-right: 10px;
+}
+
+
+h4{
+    margin-bottom: 5px;
+    display: inline;
+}
+
+li{
+    font-size: .5em;
+    text-align: left;
+}
+
+a{
+    text-decoration: none;
+}
+
+a.dark{
+    color: white;
+}
+
+a.light{
+    color: black;
+}
+
+a:hover{
+    opacity: 0.7;
+}
+
+.portfolio-image{
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
 }

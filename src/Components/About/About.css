@@ -1,5 +1,12 @@
 .skills-container{
-    width: 50%;
-    justify-content: start;
-    display: inline-block;
+    column-count: 4;
+    column-fill: auto;
+}
+
+.skill-column{
+    width: 25%;
+}
+
+.about-content{
+    margin-top: 11vh;
 }

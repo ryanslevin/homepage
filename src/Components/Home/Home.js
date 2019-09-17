@@ -6,6 +6,8 @@ import '../../App.css'
 export default function Home(props) {
 
 
+    //Variables to hold the CSS class names, theme appended to end via props
+    //to enable theme switching
     let homeContainerClass = 'home home-' + props.theme;
     let nameContainerClass = 'name-container';
     let nameClass = 'name name-' + props.theme;
