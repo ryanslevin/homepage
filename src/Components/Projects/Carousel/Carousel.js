@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faReact, faAws, faWindows, faJava, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -15,19 +15,25 @@ import '../../../App.css'
 
 function Carousel(props) {
 
-  //Settings for carousel
-  let settings = {
-    dots: true,
-    infinite: true,
-    speed: 800,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  };
+
 
   //Variables to control class theming
   let sliderContainerClass = 'slider-container slider-' + props.theme;
   let faLinkClass = 'fa-' + props.theme;
-  let headerClass = 'a ' + props.theme;
+  let headerClass = 'project-link ' + props.theme;
+  let prevArrowClass = 'slick-prev slick-' + props.theme;
+  let nextArrowClass = 'slick-next slick-' + props.theme;
+
+    //Settings for carousel
+    let settings = {
+      dots: false,
+      infinite: true,
+      speed: 800,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow: <button type="button" class={prevArrowClass}>Previous</button>,
+      nextArrow: <button type="button" class={nextArrowClass}>Previous</button>,
+    };
 
   return (
 
@@ -48,7 +54,7 @@ function Carousel(props) {
                 </ul>
               </div>
               <div className="column">
-                <img className='portfolio-image' src={HomepageImage} />
+                <img className='portfolio-image' alt='Screenshot of Homepage web-app'src={HomepageImage} />
               </div>
             </div>
           </div>
@@ -68,7 +74,7 @@ function Carousel(props) {
                 </ul>
               </div>
               <div className="column">
-          <img className='portfolio-image' src={PageAvailabilityImage} />
+          <img className='portfolio-image' alt='Screenshot of page availability script'src={PageAvailabilityImage} />
         </div>
         </div>
       </div>
@@ -88,7 +94,7 @@ function Carousel(props) {
                 </ul>                
               </div>
             <div className='column'>
-            <img className='portfolio-image' src={EregImage} />
+            <img className='portfolio-image' alt='Screenshot of eReg code' src={EregImage} />
             </div>
             </div>
           </div>

@@ -60,7 +60,7 @@ function Background(props) {
               },
             "line_linked": {
                 "enable": true,
-                "opacity": 1,
+                "opacity": .75,
                 "color": "#383838",
                 "width": 1,
                 "distance": 3000,
@@ -72,7 +72,7 @@ function Background(props) {
                 "bounce": true
             },
             "size": {
-                "value": 1
+                "value": .25
             },
             "opacity": {
                 "anim": {

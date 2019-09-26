@@ -42,21 +42,32 @@ class NavBar extends Component {
 
         //Switching which icon (moon/sun) is shown based on theme
         if (this.props.theme === 'light') {
-            icon = <FontAwesomeIcon icon={faMoon} onClick={this.props.handleThemeChange(this.event)}/>
-        }else {
-            icon = <FontAwesomeIcon icon={faSun} onClick={this.props.handleThemeChange(this.event)}/>
+            icon = <FontAwesomeIcon icon={faMoon} onClick={this.props.handleThemeChange(this.event)} />
+        } else {
+            icon = <FontAwesomeIcon icon={faSun} onClick={this.props.handleThemeChange(this.event)} />
         }
 
         return (
             <div className={navBarClass}>
-                <Link className={homeLinkClass} to='homeContainer'
-                    spy={true} smooth={true} duration={500} onClick={() => this.handleContainerChange('homeContainer')}>Home</Link>
-                <Link className={aboutLinkClass} to='aboutContainer'
-                    spy={true} smooth={true} duration={500} onClick={() => this.handleContainerChange('aboutContainer')}>About</Link>
-                <Link className={projectsLinkClass} to='projectsContainer'
-                    spy={true} smooth={true} duration={500} onClick={() => this.handleContainerChange('projectsContainer')}>Projects</Link>
-                <Link className={contactLinkClass} to='contactContainer'
-                    spy={true} smooth={true} duration={500} onClick={() => this.handleContainerChange('contactContainer')}>Contact</Link>
+                <div className='nav-btn-container'>
+                    <Link className={homeLinkClass} to='homeContainer'
+                        spy={true} smooth={true} duration={500} onClick={() => this.handleContainerChange('homeContainer')}>Home</Link>
+                </div>
+                <div className='nav-btn-container'>
+
+                    <Link className={aboutLinkClass} to='aboutContainer'
+                        spy={true} smooth={true} duration={500} onClick={() => this.handleContainerChange('aboutContainer')}>About</Link>
+                </div>
+                <div className='nav-btn-container'>
+
+                    <Link className={projectsLinkClass} to='projectsContainer'
+                        spy={true} smooth={true} duration={500} onClick={() => this.handleContainerChange('projectsContainer')}>Projects</Link>
+                </div>
+                <div className='nav-btn-container'>
+                    <Link className={contactLinkClass} to='contactContainer'
+                        spy={true} smooth={true} duration={500} onClick={() => this.handleContainerChange('contactContainer')}>Contact</Link>
+                </div>
+
                 {icon}
             </div>
         )

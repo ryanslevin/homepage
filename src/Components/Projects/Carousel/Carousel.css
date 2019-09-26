@@ -1,3 +1,4 @@
+html { font-size: calc(1em + 1vw) }
 
 .out{
     width: 100%;
@@ -5,9 +6,9 @@
 }
 .slider-container{
     width: 100%;
-    height: 70vh;
+    height: 20%;
     display: inline-block;
-    margin-top: 10vh;
+    margin-top: 2vh;
 }
 
 .slider-container-inner{
@@ -114,7 +115,7 @@ button.slick.next{
 }
 
 .fa-dark{
-    color: white;
+    color: #f5f5f5;
     margin-right: 10px;
 }
 
@@ -129,19 +130,19 @@ li{
     text-align: left;
 }
 
-a{
+.project-link{
     text-decoration: none;
 }
 
-a.dark{
-    color: white;
+.project-link.dark{
+    color: #f5f5f5;
 }
 
-a.light{
+.project-link.light{
     color: black;
 }
 
-a:hover{
+.project-link:hover{
     opacity: 0.7;
 }
 
@@ -150,3 +151,22 @@ a:hover{
     max-width: 100% !important;
     height: auto !important;
 }
+
+button.slick-prev {
+    left: -35px;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 30px;
+    line-height: 1;
+    opacity: .75;
+}
+
+.slick-light:before{
+    color: black !important;
+}
+
+.slick-dark:before{
+    color: #f5f5f5 !important;
+}
+
