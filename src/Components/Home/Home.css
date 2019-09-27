@@ -25,7 +25,7 @@
 }
 
 .name-dark{
-    color: white;
+    color: #f5f5f5;
 }
 
 .title{
@@ -33,6 +33,7 @@
     font-size: 1.75vmax;
     font-weight: 200;
     top: -15%;
+    margin: 0;
 }
 
 .title-light{
@@ -42,9 +43,10 @@
 }
 
 .title-dark{
-    color: rgb(156, 156, 156);
+    color: #f5f5f5;
     position: relative;
     right: 0px;
+    opacity: .6;
 }
 
 .image-container{
@@ -52,17 +54,18 @@
 }
 
 .fa {
-    padding: 2vmax;
+    padding: .5vmax;
+    margin: 1.5vmax;
     font-size: 2vmax;
     width: 3vmax;
     text-align: center;
     text-decoration: none;
+    display: inline;
   }
   
   .fa:hover {
     opacity: 0.7;
   }
-  
 
   .fa-facebook {
     color: black;
@@ -81,6 +84,8 @@
   }
 
   .fa-dark{
-      color: white;
+      color: #f5f5f5;
   }
+
+  
 

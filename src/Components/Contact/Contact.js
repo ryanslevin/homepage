@@ -2,37 +2,96 @@ import React, { Component } from 'react';
 import './Contact.css'
 import '../../App.css'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faRocket } from '@fortawesome//free-solid-svg-icons'
+
 class Contact extends Component {
+
+
+    constructor(props) {
+        super(props);
+        this.state = { message: '', email: '', formResponse: '' };
+        this.handleMessageChange = this.handleMessageChange.bind(this);
+        this.handleEmailChange = this.handleEmailChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.formResponse = '';
+    }
+
+    handleMessageChange(event) {
+        this.setState({ message: event.target.value })
+    }
+
+    handleEmailChange(event) {
+        this.setState({ email: event.target.value })
+    }
+
+    handleSubmit = (event) => {
+        const templateId = 'template_qZW0hSVb';
+
+        if (this.state.email === '') {
+            this.setState({formResponse: 'Launch Failed! Please add an email address and retry.'})
+        }else if (this.state.message === '') {
+            this.setState({formResponse: 'Launch Failed! Please add a message and retry.'})
+        }else {
+            this.sendFeedback(templateId, { message_html: this.state.message, from_name: this.state.email, reply_to: this.state.email })
+        }
+    }
+
+    sendFeedback(templateId, variables) {
+        window.emailjs.send(
+            'gmail', templateId,
+            variables
+        ).then(res => {
+            this.setState({message: '', email: '', formResponse: 'Email Launched!'})
+        })
+            // Handle errors here however you like, or use a React error boundary
+            .catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err,
+                alert('There was an error with your submission, please try again.')))
+
+    }
 
     render() {
 
-        let contactClass = 'outer-container container-'+this.props.theme;
-        let innerClass='inner-container inner-'+this.props.theme;
+        let contactClass = 'outer-container container-' + this.props.theme;
+        let innerClass = 'inner-container inner-' + this.props.theme;
+        let emailFieldClass = 'contact-form-field contact-form-field-' + this.props.theme +' email';
+        let messageFieldClass = 'contact-form-field contact-form-field-' + this.props.theme + ' message-body';
+        let rocketClass = 'fa fa-rocket submit-icon fa-' + this.props.theme;
 
         return (
             <div className={contactClass} id={this.props.id}>
-                                <div className={innerClass}>
-                <h2>Contact</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque venenatis pellentesque mollis. Nam quis erat lorem. Quisque et magna vitae enim fringilla convallis. Maecenas iaculis ligula sit amet nibh pellentesque, sit amet scelerisque lacus ornare. Aenean ut lectus convallis, facilisis dui non, mollis purus. In suscipit nibh eget condimentum commodo. Sed rutrum lectus et mi condimentum, nec malesuada lectus placerat. Vivamus enim nunc, condimentum quis dapibus a, rhoncus id mi. Morbi vitae pellentesque lectus. Cras vel nulla vitae velit pellentesque aliquam in efficitur ligula. Aliquam semper aliquet enim ac semper. Vestibulum pulvinar ex leo, at posuere odio aliquam quis. Vivamus volutpat quis ex quis gravida.
-    
-    Nunc pellentesque bibendum nulla malesuada aliquet. Nulla a porta erat. Donec id vestibulum odio, at mattis quam. Quisque tempus et odio ac ullamcorper. Nulla quis ex nisl. Donec pharetra nulla nec nunc molestie, ut mattis nisi facilisis. Phasellus arcu quam, faucibus eget venenatis gravida, vulputate ac tellus. Curabitur hendrerit auctor dolor non imperdiet.
-    
-    Aliquam tortor lacus, convallis vitae urna et, fermentum semper nibh. Duis arcu erat, dictum id diam eu, accumsan scelerisque urna. Donec ac ullamcorper turpis. Aliquam condimentum sed mauris eu tempor. Pellentesque non leo nec ex pretium laoreet ac id felis. Ut sed tincidunt ante. Cras maximus in nunc accumsan venenatis.
-    
-    Quisque in hendrerit mauris, ac tempor arcu. Aliquam libero erat, lobortis ut tempus nec, cursus ac leo. Ut at hendrerit purus, at lacinia nunc. Nam quis ullamcorper tortor, vel scelerisque orci. Praesent commodo sollicitudin convallis. Quisque placerat ut elit in interdum. Fusce bibendum ex in odio semper, id dignissim nulla faucibus. Fusce ac odio felis.
-    
-    Cras sit amet sapien elit. Quisque congue magna vitae lectus ultricies, vitae tincidunt dui vehicula. Proin quis mauris vel leo laoreet mollis et at sem. Ut a luctus dolor. Aliquam tortor urna, sollicitudin ac orci ullamcorper, volutpat consectetur mauris. Nunc imperdiet odio at nisi congue, id dignissim erat varius. Maecenas sed eleifend ligula.
-    
-    Etiam elementum mi non fringilla vestibulum. Curabitur venenatis tellus quis augue laoreet aliquet. Mauris lectus mi, congue ut molestie et, feugiat in augue. Suspendisse non libero non arcu aliquam sagittis at in nulla. Vestibulum varius bibendum orci, in ultrices ex hendrerit id. Cras condimentum tristique eros tempor dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent interdum ipsum at consequat hendrerit. Aliquam faucibus ultrices consectetur.
-    
-    Curabitur et diam justo. Cras finibus ligula erat. Nulla facilisi. Suspendisse eleifend facilisis velit id auctor. Etiam consectetur nunc ut sem malesuada lacinia. Nam gravida feugiat tincidunt. Ut dignissim rhoncus faucibus. Suspendisse ac condimentum ex, ultrices blandit lacus. Ut aliquet, quam ut finibus accumsan, felis ipsum vestibulum dui, at varius enim ipsum et odio. Curabitur id mi justo.
-    
-    In laoreet auctor lorem, a lobortis nisl rutrum sit amet. Aliquam ac ornare nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Quisque lacinia, tortor ut viverra semper, quam nulla cursus massa, a scelerisque libero turpis eu ex. Pellentesque sodales velit ante, a fringilla purus ullamcorper nec. Vivamus accumsan massa non dolor ultrices, non sodales nisl rutrum. Cras porttitor nibh eget dolor dictum tristique. Vivamus a dictum metus. Donec dapibus odio eget aliquet cursus. Aenean placerat enim lectus, in tempor metus lobortis non. Donec tempus pellentesque maximus. Sed erat risus, malesuada in mauris ut, volutpat dapibus augue. Morbi porta non urna sed lobortis. Morbi euismod interdum nibh et lacinia. Suspendisse ut venenatis erat.
-    
-    Proin convallis volutpat arcu. Morbi ultricies, dui sed congue convallis, risus nulla tempor diam, id rutrum metus mi sit amet erat. Integer vel vehicula ante, vel mattis mi. Nullam at velit et urna varius feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget fringilla velit, et venenatis magna. Sed feugiat scelerisque tincidunt. Nullam tincidunt diam libero, eu placerat mauris consequat sed. Donec vehicula nisi vel purus suscipit, sed mollis nisl elementum.
-    
-Fusce congue aliquet pellentesque. Proin pellentesque sed velit id condimentum. Nunc dictum, ex in aliquet posuere, lectus purus sollicitudin nisi, quis consectetur nisi mauris eu dolor. Duis hendrerit iaculis suscipit. Etiam in aliquam tortor. Nunc mattis augue at nunc venenatis rhoncus id feugiat leo. Etiam in justo elementum, porta erat vitae, convallis diam. Maecenas at dictum velit. Ut in nibh tellus. Praesent eu accumsan leo. Vestibulum neque turpis, interdum id ultricies eget, commodo at velit. Vivamus congue justo velit, sit amet molestie metus fermentum non. Donec mauris orci, pulvinar at ornare id, malesuada facilisis augue. Sed eget magna id ante aliquet dictum.</p>
-            </div>
+                <h2>Let's talk.</h2>
+                <div className={innerClass}>
+                    <form className="contact-form">
+                        <div>
+                            <input
+                                id="email-body"
+                                type='email'
+                                className={emailFieldClass}
+                                name="RyanSlevin.com Contact Form Submission"
+                                onChange={(event) => this.handleEmailChange(event)}
+                                placeholder="email@example.com"
+                                required='true'
+                                value={this.state.email}
+                            />
+                        </div>
+                        <div>
+                            <textarea
+                                id="email-body"
+                                className={messageFieldClass}
+                                name="RyanSlevin.com Contact Form Submission"
+                                onChange={(event) => this.handleMessageChange(event)}
+                                placeholder="Hello Ryan, I would like to hire you."
+                                required
+                                value={this.state.message}
+                            />
+                        </div>
+                        <div className='submit-container'>
+                        <FontAwesomeIcon type='submit' icon={faRocket} class={rocketClass} onClick={() => this.handleSubmit()} />
+                        <p className='status-message'>{this.state.formResponse}</p>
+                        </div>
+                    </form>
+                </div>
             </div>
         )
     }

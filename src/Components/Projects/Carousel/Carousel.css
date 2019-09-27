@@ -1,39 +1,43 @@
+html { font-size: calc(1em + 1vw) }
 
 .out{
     width: 100%;
-    text-align: center;
+    text-align: left;
 }
 .slider-container{
-    width: 80%;
-    text-align: center;
-    height: 70vh;
+    width: 100%;
+    height: 20%;
     display: inline-block;
-    border: 2px rgb(8, 8, 8) solid;
-    border-radius: .5%;
-}
-
-.slider-dark{
-    background-color: rgb(20, 20, 20)
-}
-
-.slider-light{
-    background-color: rgb(190, 190, 190)
+    margin-top: 2vh;
 }
 
 .slider-container-inner{
     column-count: 2;
     padding: 5px;
+    text-align: left;
+    margin: 25px;
+    height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .slider-container-inner{
+        column-count: 1;
+    }
+
+    .slider-container{
+        margin-top: 0vh;
+    }
 }
 
 .two-columns{
     column-count: 2;
-    width: 50%;
-    text-align: center;
+    width: 100%;
     display: inline-block;
 }
 
 .column{
-    height: 100%;
+    height: 50%;
+    text-align: left;
 }
 
 .slick-slide img{
@@ -76,22 +80,63 @@ button.slick.next{
     font-size: .75em;
 }
 
-.company-title-react{
-    color: rgb(0, 169, 221);
+.project-title{
+    display: inline;
 }
 
-.company-title-aws{
-    color: rgb(255, 145, 0);
+.fa-light{
+    color: black;
+    margin-right: 10px;
 }
 
-.company-title-microsoft{
-    color: rgb(0, 145, 202);
+.fa-dark{
+    color: #f5f5f5;
+    margin-right: 10px;
 }
 
-.company-title-java{
-    color: rgb(226, 0, 0);
+
+h4{
+    margin-bottom: 5px;
+    display: inline;
 }
 
-.company-title-spring{
-    color: rgb(90, 202, 68);
+.project-link{
+    text-decoration: none;
 }
+
+.project-link.dark{
+    color: #f5f5f5;
+}
+
+.project-link.light{
+    color: black;
+}
+
+.project-link:hover{
+    opacity: 0.7;
+}
+
+.portfolio-image{
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+button.slick-prev {
+    left: -35px;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 30px;
+    line-height: 1;
+    opacity: .75;
+}
+
+.slick-light:before{
+    color: black !important;
+}
+
+.slick-dark:before{
+    color: #f5f5f5 !important;
+}
+

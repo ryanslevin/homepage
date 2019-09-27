@@ -8,7 +8,6 @@ import Background from './Components/Background/Background'
 import './App.css';
 
 import { Events } from "react-scroll";
-import { throwStatement } from '@babel/types';
 
 
 class App extends Component {
@@ -18,18 +17,22 @@ class App extends Component {
     theme: 'dark'
   }
 
+
   componentDidMount() {
+
+    //Outputs scroll begin events to console for debugging react-scroll
     Events.scrollEvent.register("begin", function (to, element) {
       console.log("begin", arguments);
     });
 
+    //Outputs scroll end events to console for debugging react-scroll
     Events.scrollEvent.register("end", function (to, element) {
       console.log("end", arguments);
     });
   }
 
+  //Handles theme change action from NavBar and sets state
   handleThemeChange(event) {
-
     if (this.state.theme === 'dark') {
       this.setState({
         theme: 'light'

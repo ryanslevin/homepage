@@ -11,7 +11,7 @@ html { font-size: calc(1em + 1vw) }
 }
 
 .app-dark{
-    color: white;
+    color: #f5f5f5;
 }
 
 .outer-container{
@@ -28,7 +28,6 @@ html { font-size: calc(1em + 1vw) }
     width: 75%;
     height: 100%;
     margin-top: 1vh;
-    margin-bottom: 50vh;
     padding: 10px;
     text-align: left;
     display: inline-block;
@@ -42,7 +41,7 @@ html { font-size: calc(1em + 1vw) }
 }
 
 .background-container-dark{
-    background-image: linear-gradient(rgb(26, 26, 26) 5%,rgb(15, 15, 15),  black);
+    background-image: linear-gradient(rgb(20, 20, 20) 5%,rgb(15, 15, 15),  black);
 }
 
 .background-container-light{
@@ -55,8 +54,39 @@ html { font-size: calc(1em + 1vw) }
 
 p{
     font-size: .6em;
+    font-weight: 300;
 }
 
 h2{
     font-weight: 200;
+    font-size: 1.5em;
+    text-align: center;
+    display: block;
+    margin-top: 10vh;
+}
+
+@media only screen and (max-width: 600px) {
+    h2
+{
+    margin-top: 2vh;
+}
+
+}
+h3{
+
+}
+
+h4{
+
+}
+
+h5{
+    font-size: .6em;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+ul{
+    margin-top: 10px;
 }
