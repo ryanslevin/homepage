@@ -1,7 +1,6 @@
 html { font-size: calc(1em + 1vw) }
 
 .nav-bar{
-    column-count: 2;
     width: 100%;
     height: 3vh;
     position: fixed;
@@ -30,6 +29,7 @@ html { font-size: calc(1em + 1vw) }
     text-align: center;
     vertical-align: middle;
     font-size: .6em;
+    width: 20%;
 }
 
 .nav-btn-light{
@@ -61,7 +61,6 @@ html { font-size: calc(1em + 1vw) }
 
 .nav-btn-active-light:before, .nav-btn-active-dark:before, .nav-btn-active-light:after, .nav-btn-active-dark:after {
     opacity: 1;
-    font-size: 1em;
 }
 
 .nav-btn-active-light:before, .nav-btn-active-dark:before{
@@ -78,7 +77,6 @@ html { font-size: calc(1em + 1vw) }
 
 .nav-btn:before, .nav-btn:after {
     opacity: 0;
-    font-size: 1em;
     transition: all .5s;
 }
 

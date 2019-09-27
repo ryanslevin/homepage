@@ -67,8 +67,9 @@ class NavBar extends Component {
                     <Link className={contactLinkClass} to='contactContainer'
                         spy={true} smooth={true} duration={500} onClick={() => this.handleContainerChange('contactContainer')}>Contact</Link>
                 </div>
-
-                {icon}
+                <div className='nav-btn-container'>
+                    {icon}
+                </div>
             </div>
         )
     }

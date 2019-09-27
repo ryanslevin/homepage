@@ -10,18 +10,33 @@ html { font-size: calc(1em + 1vw) }
 
 .contact-form{
     opacity: 1;
-    color: white;
     font-family: 'Raleway';
+    display: inline;
+}
+
+.icon-container{
+    text-align: center;
 }
 
 .contact-form-field{
-    color: white;
     background-color: rgba(0,0,0,0);
-    border-color: rgba(30,30,30,0.50);
+    border-color: rgba(45,45,45,0.75);
+    border-style: solid;
+    border-width: 2px;
     font-family: 'Raleway';
     box-shadow: none;
     font-size: 0.6em;
+    margin: 10px;
+    padding: 5px;
 
+}
+
+.contact-form-field-light{
+    color: black;
+}
+
+.contact-form-field-dark{
+    color: #f5f5f5;
 }
 
 .contact-form-submit{
@@ -30,9 +45,22 @@ html { font-size: calc(1em + 1vw) }
 
 .message-body{
     width: 100%;
-    height: 15vh;
+    height: 25vh;
 }
 
 .email{
     width: 25%;
+}
+
+.submit-icon {
+    display: inline;
+    cursor: pointer;
+}
+
+.submit-container{
+    text-align: center;
+}
+
+.status-message{
+    margin-top: 2px;
 }

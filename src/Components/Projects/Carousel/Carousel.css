@@ -84,31 +84,6 @@ button.slick.next{
     display: inline;
 }
 
-.company-title-react{
-    color: rgb(0, 169, 221);
-}
-
-.company-title-aws{
-    color: rgb(255, 145, 0);
-}
-
-.company-title-microsoft{
-    color: rgb(0, 145, 202);
-}
-
-.company-title-java{
-    color: rgb(226, 0, 0);
-}
-
-.company-title-spring{
-    color: rgb(90, 202, 68);
-}
-
-.spring-boot-logo{
-    height: 30px;
-    width: 30px !important;
-}
-
 .fa-light{
     color: black;
     margin-right: 10px;
@@ -123,11 +98,6 @@ button.slick.next{
 h4{
     margin-bottom: 5px;
     display: inline;
-}
-
-li{
-    font-size: .5em;
-    text-align: left;
 }
 
 .project-link{

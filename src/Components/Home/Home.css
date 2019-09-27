@@ -60,12 +60,12 @@
     width: 3vmax;
     text-align: center;
     text-decoration: none;
+    display: inline;
   }
   
   .fa:hover {
     opacity: 0.7;
   }
-  
 
   .fa-facebook {
     color: black;

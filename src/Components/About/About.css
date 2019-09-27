@@ -25,9 +25,8 @@ html { font-size: calc(1em + 1vw) }
     width: 100%;
 }
 
-
 li{
-    font-size: .2em;
+    font-size: .6em;
     text-align: left;
 }
 
