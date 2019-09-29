@@ -60,8 +60,6 @@ class About extends Component {
                                     <li>Algorithms and Data Structures</li>
                                     <li>RESTful API Design and Creation</li>
                                     <li>Database Design and Management</li>
-                                    <li>Service Oriented Architecture</li>
-                                    <li>Debugging</li>
                                 </ul>
                             </div>
                         </div>
