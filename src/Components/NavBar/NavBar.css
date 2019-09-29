@@ -127,3 +127,13 @@ html { font-size: calc(1em + 1vw) }
 .fa-moon:hover{
     opacity: 0.7;
 }
+
+@media only screen and (max-width: 600px) {
+    .nav-bar {
+        font-size: 1.1em;
+    }
+
+    .fa-sun, .fa-moon{
+        font-size: 1.1em;
+    }
+}

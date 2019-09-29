@@ -44,21 +44,17 @@ class App extends Component {
     }
   }
 
-  componentDidUpdate() {
-    console.log(this.state.theme)
-  }
-
   render() {
 
     let appStyleClass = 'app app-' + this.state.theme;
-    let backgroundContainerStyle = 'background-container background-container-'+this.state.theme;
+    let backgroundContainerStyle = 'background-container-' + this.state.theme;
 
     return (
       <div className={appStyleClass}>
-        <NavBar theme={this.state.theme} handleThemeChange={() => this.handleThemeChange.bind(this)} />
         <div className={backgroundContainerStyle}>
           <Background theme={this.state.theme} />
         </div>
+        <NavBar theme={this.state.theme} handleThemeChange={() => this.handleThemeChange.bind(this)} />
         <Home id='homeContainer' theme={this.state.theme} />
         <About id="aboutContainer" theme={this.state.theme} />
         <Projects id='projectsContainer' theme={this.state.theme} />
