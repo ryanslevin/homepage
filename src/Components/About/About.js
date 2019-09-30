@@ -38,6 +38,7 @@ class About extends Component {
                             <div className='skill-column'>
                                 <h5>Frameworks:</h5>
                                 <ul className='skill-list'>
+                                    <li>Spring</li>
                                     <li>Spring Boot</li>
                                     <li>Hibernate</li>
                                     <li>React</li>
@@ -47,10 +48,9 @@ class About extends Component {
                                 <h5>Tools:</h5>
                                 <ul className='skill-list'>
                                     <li>Visual Studio Code</li>
-                                    <li>Terminal</li>
+                                    <li>Linux Development Environment</li>
                                     <li>AWS Amplify</li>
                                     <li>Postman</li>
-                                    <li>Chrome Developer Tools</li>
                                 </ul>
                             </div>
                             <div className='skill-column'>
