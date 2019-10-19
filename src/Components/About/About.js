@@ -18,7 +18,7 @@ class About extends Component {
                         <p>
                             I'm a highly technical administrative professional who uses my passion for code to improve the lives and experiences of my customers.
                         I'm currently pursuing a <a className='school-link' href='https://london.ac.uk/courses/computer-science'>BSc Computer Science</a> degree
-                            while developing personal projects and contributing to open source initiatives.
+                            while developing personal projects.
                     </p>
                         <p>
 
