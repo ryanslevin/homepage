@@ -28,27 +28,24 @@ class About extends Component {
                             <div className='skill-column'>
                                 <h5>Languages:</h5>
                                 <ul className='skill-list'>
-                                    <li>Java</li>
-                                    <li>Python</li>
-                                    <li>MySQL/T-SQL</li>
                                     <li>JavaScript</li>
+                                    <li>Java</li>
+                                    <li>MySQL</li>
                                     <li>HTML/CSS</li>
                                 </ul>
                             </div>
                             <div className='skill-column'>
                                 <h5>Frameworks:</h5>
                                 <ul className='skill-list'>
-                                    <li>Spring</li>
+                                    <li>React</li>
                                     <li>Spring Boot</li>
                                     <li>Hibernate</li>
-                                    <li>React</li>
                                 </ul>
                             </div>
                             <div className='skill-column'>
                                 <h5>Tools:</h5>
                                 <ul className='skill-list'>
                                     <li>Visual Studio Code</li>
-                                    <li>Linux Development Environment</li>
                                     <li>AWS Amplify</li>
                                     <li>Postman</li>
                                 </ul>
@@ -58,7 +55,7 @@ class About extends Component {
                                 <ul className='skill-list'>
                                     <li>Object Oriented Programming</li>
                                     <li>Algorithms and Data Structures</li>
-                                    <li>RESTful API Design and Creation</li>
+                                    <li>RESTful API Design and Development</li>
                                     <li>Database Design and Management</li>
                                 </ul>
                             </div>

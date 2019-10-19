@@ -1,17 +1,18 @@
 import React from 'react';
 import Slider from 'react-slick';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import HomepageImage from '../../../Images/homepage.png'
-import EregImage from '../../../Images/ereg.png'
-import PageAvailabilityImage from '../../../Images/pageavailability.png'
+import HomepageImage from '../../../Images/homepage.png';
+import EregImage from '../../../Images/ereg.png';
+import PageAvailabilityImage from '../../../Images/pageavailability.png';
+import UmbrellaImage from '../../../Images/umbrella_ss.png';
 
-import './Carousel.css'
-import '../../../App.css'
+import './Carousel.css';
+import '../../../App.css';
 
 function Carousel(props) {
 
@@ -39,13 +40,36 @@ function Carousel(props) {
 
     <Slider {...settings}>
       <div className='out'>
+      <div className={sliderContainerClass}>
+          <div className='slider-container-inner'>
+          <a className={headerClass} href='https://github.com/ryanslevin/umbrella'><FontAwesomeIcon icon={faGithub} className={faLinkClass} /></a>
+          <a className={headerClass} href="https://www.umbrellaadvice.com"><h4>UmbrellaAdvice</h4></a>
+          <p>Weather/Clothing Advice Webapp</p>
+              <div className="column">
+                <h5>Languages: JavaScript </h5>
+                <h5>Frameworks: React</h5>
+                <h5>Tools: AWS Amplify</h5>
+                <ul>
+                  <li>Uses location services, OpenWeatherMaps API, and Google Paces API</li>
+                  <li>Gets weather at the requested location and provides advice on clothing</li>
+                  <li>Deployed with AWS Amplify to allow for continuous deployment</li>
+                </ul>
+              </div>
+              <div className="column">
+                <a  href="https://www.umbrellaadvice.com"><img className='portfolio-image' alt='Screenshot of Umbrella web app' src={UmbrellaImage} /> </a>
+              </div>
+            </div>
+          </div>
+          </div>
+
+          <div className='out'>
         <div className={sliderContainerClass}>
           <div className='slider-container-inner'>
           <a className={headerClass} href='https://github.com/ryanslevin/homepage'><FontAwesomeIcon icon={faGithub} className={faLinkClass} /><h4>Homepage</h4></a>
           <p>Personal Portfolio Website</p>
               <div className="column">
-                <h5>Languages: Javascript / JSX / CSS</h5>
-                <h5>Frameworks: React</h5>
+                <h5>Language: JavaScript</h5>
+                <h5>Framework: React</h5>
                 <h5>Tools: AWS Amplify</h5>
                 <ul>
                   <li>Single page application using the React framework</li>
