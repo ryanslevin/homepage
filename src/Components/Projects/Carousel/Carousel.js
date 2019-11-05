@@ -10,6 +10,7 @@ import HomepageImage from '../../../Images/homepage.png';
 import EregImage from '../../../Images/ereg.png';
 import PageAvailabilityImage from '../../../Images/pageavailability.png';
 import UmbrellaImage from '../../../Images/umbrella_ss.png';
+import MinimalistImage from '../../../Images/minimalist_ss.png';
 
 import './Carousel.css';
 import '../../../App.css';
@@ -39,6 +40,30 @@ function Carousel(props) {
   return (
 
     <Slider {...settings}>
+
+<div className='out'>
+      <div className={sliderContainerClass}>
+          <div className='slider-container-inner'>
+          <a className={headerClass} href='https://github.com/ryanslevin/minimalist'><FontAwesomeIcon icon={faGithub} className={faLinkClass} /></a>
+          <a className={headerClass} href="https://www.minimalistapp.com"><h4>MinimaList</h4></a>
+          <p>Todo List Webapp</p>
+              <div className="column">
+                <h5>Languages: JavaScript/Java </h5>
+                <h5>Frameworks: React/Spring Boot</h5>
+                <h5>Tools: AWS Amplify/AWS Elastic Beanstalk/Auth0</h5>
+                <ul>
+                  <li>Minimalist todo/tasklist webapp that allows users to create, read, update and delete daily tasks.</li>
+                  <li>Backend built with Java and Spring Boot persisting data to a MySQL database, frontend built with JavaScript and React.</li>
+                  <li>Auth0 implemented to provide authentication and authorization for both backend and frontend.</li>
+                  <li>Deployed with AWS Amplify and AWS Elastic Beanstalk.</li>
+                </ul>
+              </div>
+              <div className="column">
+                <a  href="https://www.minimalistapp.com"><img className='portfolio-image' alt='Screenshot of MinimaList web app' src={MinimalistImage} /> </a>
+              </div>
+            </div>
+          </div>
+          </div>
       <div className='out'>
       <div className={sliderContainerClass}>
           <div className='slider-container-inner'>
@@ -50,9 +75,8 @@ function Carousel(props) {
                 <h5>Frameworks: React</h5>
                 <h5>Tools: AWS Amplify</h5>
                 <ul>
-                  <li>Uses location services, OpenWeatherMaps API, and Google Paces API</li>
-                  <li>Gets weather at the requested location and provides advice on clothing</li>
-                  <li>Deployed with AWS Amplify to allow for continuous deployment</li>
+                  <li>UmbrellaAdvice.com uses location services, the OpenWeatherMaps API, and the Google Places API to provide weather dependant clothing advice.</li>
+                  <li>Deployed with AWS Amplify to allow for continuous deployment.</li>
                 </ul>
               </div>
               <div className="column">
@@ -61,7 +85,6 @@ function Carousel(props) {
             </div>
           </div>
           </div>
-
           <div className='out'>
         <div className={sliderContainerClass}>
           <div className='slider-container-inner'>
@@ -89,7 +112,6 @@ function Carousel(props) {
         <p>Recursive Page Availability Monitor</p>
         <div className="column">
                 <h5>Languages: PowerShell</h5>
-                <h5>Frameworks: .NET</h5>
                 <ul>
                   <li>Recursive page availability monitor for eCommerce website.</li>
                   <li>Written in PowerShell using .NET framework functionality</li>
@@ -108,13 +130,11 @@ function Carousel(props) {
           <a className={headerClass} href='https://github.com/ryanslevin/ereg'><FontAwesomeIcon icon={faGithub} className={faLinkClass} /><h4>eReg</h4></a>
           <p>User and Course Registration Management</p>
               <div className="column">
-              <h5>Languages: Java / MySQL / JavaScript / JSX / CSS </h5>
-                <h5>Frameworks: Spring Boot / React</h5>
-                <h5>Tools: AWS Amplify</h5>
+              <h5>Languages: Java </h5>
+                <h5>Frameworks: Spring Boot</h5>
                 <ul>
                   <li>RESTful API built with Java and Spring Boot</li>
-                  <li>Uses Hibernate to integrate with MySQL database</li>
-                  <li>Front end built with React to create Single Page Application experience</li>
+                  <li>Uses Hibernate to persist data to a MySQL database</li>
                 </ul>                
               </div>
             <div className='column'>
