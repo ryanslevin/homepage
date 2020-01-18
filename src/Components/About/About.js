@@ -16,9 +16,8 @@ class About extends Component {
                 <h2>Hi, my name is Ryan.</h2>
                     <div className='about-content'>
                         <p>
-                            I'm a highly technical administrative professional who uses my passion for code to improve the lives and experiences of my customers.
-                        I'm currently pursuing a <a className='school-link' href='https://london.ac.uk/courses/computer-science'>BSc Computer Science</a> degree
-                            while developing personal projects.
+                            I'm a Cloud Fullstack Engineer intern who uses my passion for code to improve the lives and experiences of stakeholders.
+                        I'm currently pursuing a <a className='school-link' href='https://london.ac.uk/courses/computer-science'>BSc Computer Science</a> degree.
                     </p>
                         <p>
 
